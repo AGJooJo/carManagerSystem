@@ -1,0 +1,44 @@
+{
+  "id": "2847533",
+  "name": "clglxt",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "24752891",
+      "name": "数据统计",
+      "font_class": "shujutongji-copy",
+      "unicode": "ec65",
+      "unicode_decimal": 60517
+    },
+    {
+      "icon_id": "7626527",
+      "name": "全局事务管理组件",
+      "font_class": "gailan",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "8450566",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "17755610",
+      "name": "系统管理实心",
+      "font_class": "xitongguanlishixin",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "24752501",
+      "name": "车辆信息管理",
+      "font_class": "cheliangxinxiguanli-copy",
+      "unicode": "ec64",
+      "unicode_decimal": 60516
+    }
+  ]
+}

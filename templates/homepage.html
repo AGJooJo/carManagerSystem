@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/homepage_status_bar.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static',filename='css/aliicon/iconfont.css') }} " />
+
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src=" {{ url_for('static',filename='js/homepage_time.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static',filename='js/homepage_leftnav.js') }} "></script>
+</head>
+<body onload="getNowDate()">
+    <div id="status_bar">
+        <div id="title">
+            <div id="title_icon"><img src="{{ url_for('static',filename='') }}"/></div>
+        </div>
+        <div id="timeuse">
+            <div id="time"></div>
+        </div>
+        <div id="weather">
+            <div id="he-plugin-simple"></div>
+            <script>
+            WIDGET = {
+              "CONFIG": {
+                "modules": "01234",
+                "background": "1",
+                "tmpColor": "FFFFFF",
+                "tmpSize": "16",
+                "cityColor": "FFFFFF",
+                "citySize": "16",
+                "aqiColor": "FFFFFF",
+                "aqiSize": "16",
+                "weatherIconSize": "24",
+                "alertIconSize": "18",
+                "padding": "10px 10px 10px 10px",
+                "shadow": "0",
+                "language": "auto",
+                "fixed": "false",
+                "vertical": "top",
+                "horizontal": "left",
+                "key": "07acca204d62423195661bb7447f5a5c"
+              }
+            }
+            </script>
+            <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+        </div>
+    </div>
+    <div id="leftNav" class="left-nav">
+        <div id="menuBox01" class="menuBox">
+            <ul class="spMenuBox">
+                <li style="list-style: none">
+                    <div>您好！<a href="/user/ygh">ygh</a><br/>欢迎使用车辆管理系统后台</div>
+                </li>
+                <li style="list-style: none;display: flex">
+                    <div class="spMenu" id="homepage_nav">
+                        <i class="iconfont">&#xe612;</i>
+                        <div>系统首页</div>
+                    </div>
+                </li>
+                <li class="spMenuItem">
+                    <div class="spMenu">
+                        <i class="iconfont">&#xe615;</i>
+                        <span>用车管理</span>
+                        <i class="fa fa-2x fa-angle-down"></i>
+                    </div>
+                    <ul class="subMenuBox">
+                        <li><span class="subMenu">待处理</span></li>
+                        <li><span class="subMenu">用车记录台账</span></li>
+                    </ul>
+                </li>
+                <li class="spMenuItem">
+                    <div class="spMenu">
+                        <i class="iconfont">&#xec64;</i>
+                        <span>车辆管理</span>
+                        <i class="fa fa-2x fa-angle-down"></i>
+                    </div>
+                    <ul class="subMenuBox">
+                        <li><span class="subMenu">车辆档案</span></li>
+                        <li><span class="subMenu">保险管理</span></li>
+                        <li><span class="subMenu">年检管理</span></li>
+                        <li><span class="subMenu">故障管理</span></li>
+                        <li><span class="subMenu">出险管理</span></li>
+                        <li><span class="subMenu">维修管理</span></li>
+                    </ul>
+                </li>
+                <li class="spMenuItem">
+                    <div class="spMenu">
+                        <i class="iconfont">&#xec65;</i>
+                        <span>统计管理</span>
+                        <i class="fa fa-2x fa-angle-down"></i>
+                    </div>
+                    <ul class="subMenuBox">
+                        <li><span class="subMenu">统计功能1</span></li>
+                        <li><span class="subMenu">统计功能2</span></li>
+                        <li><span class="subMenu">统计功能3</span></li>
+                        <li><span class="subMenu">更多，待设计开发</span></li>
+                    </ul>
+                </li>
+                <li class="spMenuItem">
+                    <div class="spMenu">
+                        <i class="iconfont">&#xe608;</i>
+                        <span>系统管理</span>
+                        <i class="fa fa-2x fa-angle-down"></i>
+                    </div>
+                    <ul class="subMenuBox">
+                        <li><span class="subMenu">日志</span></li>
+                        <li><span class="subMenu">菜单</span></li>
+                        <li><span class="subMenu">用户</span></li>
+                        <li><span class="subMenu">更多，待设计开发</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+</body>
+</html>
