@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<div>
+    <form method="post">
+        {{ form.csrf_token }}
+        {{ form.username.label }} {{ form.username }} <br>
+        {% for message in form.username.errors %}
+            <small class="error">{{ message }}</small><br>
+        {% endfor %}
+        {{ form.password.label }} {{ form.password }} <br>
+        {% for message in form.password.errors %}
+            <small class="error">{{ message }}</small><br>
+        {% endfor %}
+        {{ form.password1.label }} {{ form.password1 }} <br>
+        {% for message in form.password1.errors %}
+            <small class="error">{{ message }}</small><br>
+        {% endfor %}
+        {{ form.name.label }} {{ form.name }} <br>
+        {% for message in form.name.errors %}
+            <small class="error">{{ message }}</small><br>
+        {% endfor %}
+        {{ form.department.label }} {{ form.department }} <br>
+        {% for message in form.department.errors %}
+            <small class="error">{{ message }}</small><br>
+        {% endfor %}
+        {{ form.drivingLicence_number.label }} {{ form.drivingLicence_number }} <br>
+        {% for message in form.drivingLicence_number.errors %}
+            <small class="error">{{ message }}</small><br>
+        {% endfor %}
+        {{ form.phone_number.label }} {{ form.phone_number }} <br>
+        {% for message in form.phone_number.errors %}
+            <small class="error">{{ message }}</small><br>
+        {% endfor %}
+        {{ form.recaptcha }}
+        {{ form.submit }}
+        <input name="input2" type="button" value="取消" onclick="javascript:this.form.reset();" />
+    </form>
+</div>
+
+</body>
+</html>

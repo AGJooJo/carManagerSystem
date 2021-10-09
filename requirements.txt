@@ -63,3 +63,7 @@ six==1.11.0
 stevedore==1.28.0
 urllib3==1.25.8
 xattr==0.6.4
+
+WTForms~=2.3.3
+Flask~=2.0.2
+redis~=3.5.3

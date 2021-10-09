@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/login.css') }}" />
+</head>
+<body>
+    <div id="outline_border">
+        <div id="headline">
+             车辆管理系统
+        </div>
+        <div id="icon">
+
+        </div>
+        <div id="list_box">
+            <form method="post">
+                {{ form.csrf_token }}
+                {{ form.username.label }} {{ form.username }} <br>
+                {% for message in form.username.errors %}
+                    <small class="error">{{ message }}</small><br>
+                {% endfor %}
+                {{ form.password.label }} {{ form.password }} <br>
+                {% for message in form.password.errors %}
+                    <small class="error">{{ message }}</small><br>
+                {% endfor %}
+                {{ form.remember }} {{ form.remember.label }}<br>
+                {{ form.submit }}<br>
+            </form>
+            <!--<div id="identification"><</div>
+            <div id="password"></div>
+            <div id="submit"></div>-->
+            <div id="bottom">
+                <div id="loss_password"><a href=" {{ url_for('register') }}">忘记密码</a></div>
+                <div id="register"><a href=" {{ url_for('register') }}">注册</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

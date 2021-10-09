@@ -1,0 +1,21 @@
+#outline_border{
+    background-color:#F8FAF8;
+    width:100%;
+    height:100%;
+}
+
+#headline{
+    font-size: 5vw;
+    /*font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;*/
+}
+
+#icon{
+    height:10vw;
+    width:10vw;
+}
+
+#list_box{
+    background-color:#FFFFFF;
+    width:40vw;
+    height:40vw;
+}
