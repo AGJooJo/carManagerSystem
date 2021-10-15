@@ -1,4 +1,5 @@
 from gmssl import sm2,utils
+from gmssl.sm2 import CryptSM2
 import redis
 
 # redis
@@ -7,23 +8,22 @@ def redis_u():
     return r
 
 # sm2 密钥生成
-class secretkey:
+class Secretkey:
     def __init__(self):
         self.priKey = utils.PrivateKey()
         self.pubKey = self.priKey.publicKey()
         self.r = redis_u()
-        self.set_key()
 
     def set_key(self):
-        self.r.set('priKey',self.priKey.toString())
-        self.r.set('pubKey',self.pubKey.toString(False))
+        pri = self.priKey.toString()
+        pub = self.pubKey.toString(False)
+        self.r.set('priKey',pri)
+        self.r.set('pubKey',pub)
 
     def get_prikey(self):
         priKey_str = self.r.get('priKey')
         return priKey_str
 
     def get_pubkey(self):
-        pubkey_str = self.r.get('pubkey')
+        pubkey_str = self.r.get('pubKey')
         return pubkey_str
-
-
